@@ -1,0 +1,12 @@
+[
+  {
+    "execute-command": "/etc/webhook/cli.sh",
+    "id": "simple-save",
+    "pass-arguments-to-command":  [
+      {
+        "source": "payload",
+        "name": "repository.repo_name"
+      },
+    ],
+      }
+]
