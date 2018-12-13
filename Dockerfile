@@ -13,7 +13,7 @@ RUN         curl -L --silent -o webhook.tar.gz https://github.com/adnanh/webhook
             rm -rf /go
 
 FROM        alpine:3.8
-RUN         apk update && apk upgrade && apk install java8
+RUN         apk update && apk upgrade && apk add openjdk8-jre
 COPY        --from=build /usr/local/bin/webhook /usr/local/bin/webhook
 VOLUME      ["/etc/webhook"]
 EXPOSE      9000
